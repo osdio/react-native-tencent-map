@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9EC89CBF1BCCF2B200FAF9D9 /* RNTencentMapManager.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9EC89CBE1BCCF2B200FAF9D9 /* RNTencentMapManager.h */; };
+		9EC89CBF1BCCF2B200FAF9D9 /* RNTencentMapManager.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 9EC89CBE1BCCF2B200FAF9D9 /* RNTencentMapManager.h */; };
 		9EC89CC11BCCF2B200FAF9D9 /* RNTencentMapManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EC89CC01BCCF2B200FAF9D9 /* RNTencentMapManager.m */; };
 		9EC89CC71BCCF2B300FAF9D9 /* libRNTencentMap.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EC89CBB1BCCF2B200FAF9D9 /* libRNTencentMap.a */; };
 		9EC89CD61BCCF34000FAF9D9 /* QMapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EC89CD51BCCF34000FAF9D9 /* QMapKit.framework */; };
@@ -27,14 +27,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		9EC89CB91BCCF2B200FAF9D9 /* CopyFiles */ = {
+		9EC89CB91BCCF2B200FAF9D9 /* Copy Files */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
-				9EC89CBF1BCCF2B200FAF9D9 /* RNTencentMapManager.h in CopyFiles */,
+				9EC89CBF1BCCF2B200FAF9D9 /* RNTencentMapManager.h in Copy Files */,
 			);
+			name = "Copy Files";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -44,7 +45,6 @@
 		9EC89CBE1BCCF2B200FAF9D9 /* RNTencentMapManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RNTencentMapManager.h; sourceTree = "<group>"; };
 		9EC89CC01BCCF2B200FAF9D9 /* RNTencentMapManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RNTencentMapManager.m; sourceTree = "<group>"; };
 		9EC89CC61BCCF2B300FAF9D9 /* RNTencentMapTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RNTencentMapTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		9EC89CCC1BCCF2B300FAF9D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9EC89CD51BCCF34000FAF9D9 /* QMapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QMapKit.framework; path = frameworks/QMapKit.framework; sourceTree = "<group>"; };
 		9EC89CD91BCCF3AB00FAF9D9 /* QMapKit.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = QMapKit.bundle; sourceTree = "<group>"; };
 		9EC89CDA1BCCF3C400FAF9D9 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -81,7 +81,6 @@
 				9EC89CD81BCCF38800FAF9D9 /* Resources */,
 				9EC89CD71BCCF35B00FAF9D9 /* Frameworks */,
 				9EC89CBD1BCCF2B200FAF9D9 /* RNTencentMap */,
-				9EC89CCA1BCCF2B300FAF9D9 /* RNTencentMapTests */,
 				9EC89CBC1BCCF2B200FAF9D9 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -102,22 +101,6 @@
 				9EC89CC01BCCF2B200FAF9D9 /* RNTencentMapManager.m */,
 			);
 			path = RNTencentMap;
-			sourceTree = "<group>";
-		};
-		9EC89CCA1BCCF2B300FAF9D9 /* RNTencentMapTests */ = {
-			isa = PBXGroup;
-			children = (
-				9EC89CCB1BCCF2B300FAF9D9 /* Supporting Files */,
-			);
-			path = RNTencentMapTests;
-			sourceTree = "<group>";
-		};
-		9EC89CCB1BCCF2B300FAF9D9 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				9EC89CCC1BCCF2B300FAF9D9 /* Info.plist */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		9EC89CD71BCCF35B00FAF9D9 /* Frameworks */ = {
@@ -148,7 +131,7 @@
 			buildPhases = (
 				9EC89CB71BCCF2B200FAF9D9 /* Sources */,
 				9EC89CB81BCCF2B200FAF9D9 /* Frameworks */,
-				9EC89CB91BCCF2B200FAF9D9 /* CopyFiles */,
+				9EC89CB91BCCF2B200FAF9D9 /* Copy Files */,
 			);
 			buildRules = (
 			);
@@ -330,6 +313,7 @@
 		9EC89CD01BCCF2B300FAF9D9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: Bo Feng (47CXR4S799)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/frameworks",
@@ -350,6 +334,7 @@
 		9EC89CD11BCCF2B300FAF9D9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: Bo Feng (47CXR4S799)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/frameworks",
@@ -418,6 +403,7 @@
 				9EC89CD11BCCF2B300FAF9D9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9EC89CD21BCCF2B300FAF9D9 /* Build configuration list for PBXNativeTarget "RNTencentMapTests" */ = {
 			isa = XCConfigurationList;
@@ -426,6 +412,7 @@
 				9EC89CD41BCCF2B300FAF9D9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -10,5 +10,8 @@
 #import <QMapKit/QMapKit.h>
 #import "RCTViewManager.h"
 
-@interface RNTencentMap : RCTViewManager
+@interface RNTencentMapManager : RCTViewManager
+
+@property (nonatomic, strong) QMapView *mapView;
+
 @end

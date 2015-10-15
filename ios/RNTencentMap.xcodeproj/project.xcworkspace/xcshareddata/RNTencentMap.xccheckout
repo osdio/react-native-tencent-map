@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>F414BE5D-90CE-4918-B3E9-84EBEFE239BB</string>
+	<key>IDESourceControlProjectName</key>
+	<string>RNTencentMap</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>DE5B590B3A9E843670106D9B46F8A82F759370D2</key>
+		<string>github.com:soliury/react-native-tecent-map.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>ios/RNTencentMap.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>DE5B590B3A9E843670106D9B46F8A82F759370D2</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github.com:soliury/react-native-tecent-map.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>DE5B590B3A9E843670106D9B46F8A82F759370D2</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>DE5B590B3A9E843670106D9B46F8A82F759370D2</string>
+			<key>IDESourceControlWCCName</key>
+			<string>react-native-tencent-map</string>
+		</dict>
+	</array>
+</dict>
+</plist>
