@@ -1,12 +1,13 @@
 var React = require('react-native');
-var Dimensions = require('Dimensions')
 
 
 var { requireNativeComponent,
     Component,
     PropTypes,
-    DeviceEventEmitter} = React;
+    DeviceEventEmitter,
+    Dimensions} = React;
 
+var {width,height} = Dimensions.get('window');
 
 class MapView extends Component {
     constructor(props) {
@@ -34,13 +35,11 @@ class MapView extends Component {
         return (
             <RNTencentMap
                 {...this.props}
-                size={{
-                     floatX:0,
-                     floatY:0,
-                     width:300,
-                     height:300
-                }}
                 onChange={this._onChange}
+                style={{
+                    width:width,
+                    height:height
+                }}
                 ></RNTencentMap>
         );
     }
@@ -59,7 +58,8 @@ MapView.propTypes = {
     hidden: PropTypes.bool,
     scrollEnabled: PropTypes.bool,
     showsUserLocation: PropTypes.bool,
-    multipleTouchEnabled: PropTypes.bool
+    multipleTouchEnabled: PropTypes.bool,
+    userTrackingMode: PropTypes.number
 };
 
 
@@ -69,7 +69,8 @@ MapView.defaultProps = {
     scrollEnabled: true,
     showsUserLocation: true,
     multipleTouchEnabled: true,
-    frame: Dimensions.get('window')
+    userTrackingMode: 1
+    //frame: Dimensions.get('window')
 };
 
 

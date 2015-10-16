@@ -10,11 +10,16 @@
 #import "AppDelegate.h"
 
 #import "RCTRootView.h"
+#import <QMapKit/QMapKit.h>
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+  
+  // Set the QMapKit apiKey
+  [QMapServices sharedServices].apiKey = @"ZPZBZ-3V2HD-ENU4M-PYUZO-GEQVE-KPB2S";
+  
   NSURL *jsCodeLocation;
 
   /**
@@ -31,7 +36,7 @@
    * on the same Wi-Fi network.
    */
 
-  jsCodeLocation = [NSURL URLWithString:@"http://localhost:8081/index.ios.bundle?platform=ios&dev=true"];
+  jsCodeLocation = [NSURL URLWithString:@"http://192.168.31.243:8081/index.ios.bundle?platform=ios&dev=true"];
 
   /**
    * OPTION 2
