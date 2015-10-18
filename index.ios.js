@@ -1,11 +1,14 @@
 var React = require('react-native');
 
 
-var { requireNativeComponent,
+var {
+    requireNativeComponent,
     Component,
     PropTypes,
     DeviceEventEmitter,
-    Dimensions} = React;
+    Dimensions,
+    StyleSheet
+    } = React;
 
 var {width,height} = Dimensions.get('window');
 
@@ -13,21 +16,16 @@ class MapView extends Component {
     constructor(props) {
         super(props);
         this._onChange = this._onChange.bind(this);
+        this.count = 0;
     }
-
-
-    componentWillMount() {
-        this.onRegionChangeListener = DeviceEventEmitter.addListener('RegionChange', this._onChange);
-    }
-
-
-    componentWillUnmount() {
-        this.onRegionChangeListener.remove();
-    }
-
 
     _onChange(event:Event) {
-        this.props.onRegionChange && this.props.onRegionChange(event)
+        console.log(this.count++);
+        console.log(event.type);
+        if (event.type == 'regionDidChangeAnimated') {
+            this.props.onRegionChanged && this.props.onRegionChanged(event);
+        }
+
     }
 
 
@@ -36,10 +34,7 @@ class MapView extends Component {
             <RNTencentMap
                 {...this.props}
                 onChange={this._onChange}
-                style={{
-                    width:width,
-                    height:height
-                }}
+                style={[styles.baseMapStyle, this.props.style]}
                 ></RNTencentMap>
         );
     }
@@ -47,18 +42,16 @@ class MapView extends Component {
 
 
 MapView.propTypes = {
-    onRegionChange: PropTypes.func,
-    frame: React.PropTypes.shape({
-        floatX: PropTypes.number.required,
-        floatY: PropTypes.number.required,
-        width: PropTypes.number.required,
-        height: PropTypes.number.required
-    }),
+    onRegionChanged: PropTypes.func,
+
     zoomEnabled: PropTypes.bool,
     hidden: PropTypes.bool,
     scrollEnabled: PropTypes.bool,
     showsUserLocation: PropTypes.bool,
     multipleTouchEnabled: PropTypes.bool,
+    showsScale: PropTypes.bool,
+    showTraffic: PropTypes.bool,
+
     userTrackingMode: PropTypes.number
 };
 
@@ -69,12 +62,22 @@ MapView.defaultProps = {
     scrollEnabled: true,
     showsUserLocation: true,
     multipleTouchEnabled: true,
+    showsScale: false,
+    showTraffic: true,
+
     userTrackingMode: 1
-    //frame: Dimensions.get('window')
 };
 
 
 var RNTencentMap = requireNativeComponent('RNTencentMap', MapView);
+
+
+var styles = StyleSheet.create({
+    baseMapStyle: {
+        width: width,
+        height: height
+    }
+});
 
 
 module.exports = MapView;
